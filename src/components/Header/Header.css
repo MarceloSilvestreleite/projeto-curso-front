@@ -1,0 +1,110 @@
+.sexy-cars-header {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background-color: black;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 20px;
+  background-color: #111;
+}
+
+.phone-email {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.main-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.logo-image {
+  width: 350px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo-text {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.main-menu a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.main-menu a:hover {
+  color: #d4af37;
+}
+
+.slogan-row {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.slogan-row h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.slogan-row h2 {
+  margin: 20px 0 0;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #d4af37;
+}
+
+@media (max-width: 768px) {
+  .slogan-row h1 {
+    font-size: 2.5rem;
+  }
+  
+  .slogan-row h2 {
+    font-size: 1.3rem;
+  }
+  
+  .main-menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logo-image {
+    width: 250px;
+  }
+}
