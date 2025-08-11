@@ -1,9 +1,11 @@
+/* HEADER.CSS - VERSÃO FINAL */
 .sexy-cars-header {
   font-family: 'Arial', sans-serif;
   color: white;
   background-color: black;
 }
 
+/* Contatos - mantido original */
 .contact-row {
   display: flex;
   justify-content: flex-end;
@@ -18,6 +20,7 @@
   color: #ccc;
 }
 
+/* Logo - mantido original */
 .main-row {
   display: flex;
   flex-direction: column;
@@ -35,8 +38,8 @@
 }
 
 .logo-image {
-  width: 350px;
-  height: auto;
+  width: 950px;
+  height: 400px;
   margin: 0 auto;
   display: block;
   transition: transform 0.3s ease;
@@ -48,11 +51,13 @@
   margin-top: 10px;
 }
 
+/* Menu - ajuste mínimo para garantir alinhamento horizontal */
 .main-menu {
   display: flex;
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
+  flex-wrap: wrap; /* Para responsividade */
 }
 
 .main-menu a {
@@ -62,25 +67,75 @@
   font-weight: bold;
   font-size: 16px;
   transition: color 0.3s;
+  white-space: nowrap; /* Evita quebra de texto */
 }
 
 .main-menu a:hover {
   color: #d4af37;
 }
 
+.active-link {
+  color: #ffcc00 !important;
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* Slogan - Efeito flamejante (novo) */
 .slogan-row {
   text-align: center;
   padding: 60px 20px;
   background: rgba(0, 0, 0, 0.7);
+  position: relative;
 }
 
 .slogan-row h1 {
   margin: 0;
-  font-size: 3.5rem;
+  font-size: 4.5rem; /* Aumentei de 3.5rem para 4.5rem */
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 10px; /* Aumentei o espaçamento entre letras */
   line-height: 1.1;
-  font-weight: 900;
+  font-weight: 1200;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  background: linear-gradient(45deg, #ffcc00, #ff6600, #ff3300);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: flame 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px rgba(255, 80, 0, 0.5);
+  position: relative;
+  display: inline-block;
+  padding: 0 100px; /* Adicionei padding horizontal */
+  transform: scaleX(1.1); /* Estica horizontalmente em 10% */
+}
+
+@keyframes flame {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 100, 0, 0.5),
+                 0 0 20px rgba(255, 60, 0, 0.4);
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 150, 0, 0.8),
+                 0 0 30px rgba(255, 80, 0, 0.6),
+                 0 0 40px rgba(255, 40, 0, 0.4);
+    transform: scale(1.02);
+  }
+}
+
+.slogan-row h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff6600, transparent);
+  animation: flameLine 2s ease-in-out infinite;
+}
+
+@keyframes flameLine {
+  0% { opacity: 0.3; width: 80%; }
+  50% { opacity: 1; width: 100%; }
+  100% { opacity: 0.3; width: 80%; }
 }
 
 .slogan-row h2 {
@@ -88,23 +143,27 @@
   font-size: 1.8rem;
   font-style: italic;
   color: #d4af37;
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
 }
 
+/* Responsivo - mantido original com pequenos ajustes */
 @media (max-width: 768px) {
   .slogan-row h1 {
     font-size: 2.5rem;
+    animation: none; /* Simplifica em mobile */
+    text-shadow: 0 0 10px rgba(255, 80, 0, 0.7);
   }
   
   .slogan-row h2 {
     font-size: 1.3rem;
   }
   
-  .main-menu {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
   .logo-image {
     width: 250px;
+  }
+  
+  .main-menu {
+    gap: 15px;
+    padding: 0 10px;
   }
 }

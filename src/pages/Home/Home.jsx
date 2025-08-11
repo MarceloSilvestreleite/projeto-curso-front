@@ -1,4 +1,5 @@
-import './Main.css';
+import React from 'react';
+import './Home.css';
 import FerrariImg from '../../assets/carros/ferrari.jpg';
 import Lamborghini from '../../assets/carros/lamborghini.jpg';
 import porche from '../../assets/carros/porsche.jpg';
@@ -14,13 +15,13 @@ import ford from '../../assets/carros/image11.svg';
 import pagani from '../../assets/carros/image20.svg';
 import rollsRoyce from '../../assets/carros/rollsRoyce.jpg';
 
-const Main = () => {
+const Home = () => {
   const luxuryCars = [
     {
       id: 1,
       name: 'Ferrari 488 GTB',
       price: 'R$ 3.200.000',
-      image: FerrariImg, // Usando a imagem importada
+      image: FerrariImg,
       features: ['V8 3.9L', '670 HP', '0-100km/h em 3.0s', 'Velocidade máxima 330km/h'],
       description: 'O Ferrari 488 GTB é um supercarro esportivo que combina desempenho excepcional com elegância italiana.'
     },
@@ -28,7 +29,7 @@ const Main = () => {
       id: 2,
       name: 'Lamborghini Huracán',
       price: 'R$ 2.800.000',
-      image: Lamborghini, // Usando a imagem importada
+      image: Lamborghini,
       features: ['V10 5.2L', '640 HP', '0-100km/h em 2.9s', 'Tração integral'],
       description: 'O Huracán oferece uma experiência de condução emocionante com seu design agressivo e desempenho impressionante.'
     },
@@ -36,7 +37,7 @@ const Main = () => {
       id: 3,
       name: 'Porsche 911 Turbo S',
       price: 'R$ 1.800.000',
-      image: porche, // Usando a imagem importada
+      image: porche,
       features: ['Boxer 6 3.8L', '650 HP', '0-100km/h em 2.7s', 'PDK 8 velocidades'],
       description: 'O 911 Turbo S é a combinação perfeita entre luxo, tecnologia e desempenho esportivo.'
     },
@@ -47,7 +48,7 @@ const Main = () => {
       image: mclaren,
       features: ['V8 4.0L', '720 HP', '0-100km/h em 2.8s', 'Fibra de carbono'],
       description: 'Com design aerodinâmico e tecnologia de ponta, o 720S redefine o conceito de supercarro.'
-    }, // Faltava esta vírgula aqui
+    },
     {
       id: 5,
       name: 'Aston Martin DBS Superleggera',
@@ -130,22 +131,26 @@ const Main = () => {
     }
   ];
 
-  return (
-    <main className="main-content">
-      <section className="hero-section">
-        <h2>Oferta Especial</h2>
+   return (
+    <main className="main-content"> {/* Alterado para match com CSS */}
+      <section className="hero-section"> {/* Corrigido */}
+        <h2>Oferta Especial</h2> {/* Mantido como h2 para match com CSS */}
         <p>Descubra nossa exclusiva frota de carros esportivos de luxo</p>
       </section>
 
-      <div className="car-gallery">
+      <div className="car-gallery"> {/* Corrigido */}
         {luxuryCars.map(car => (
-          <div key={car.id} className="car-card">
+          <div key={car.id} className="car-card"> {/* Corrigido */}
             <div className="car-image-container">
-              {car.image ? (
-                <img src={car.image} alt={car.name} className="car-image" />
-              ) : (
-                <div className="car-image-placeholder">{car.name}</div>
-              )}
+              <img 
+                src={car.image} 
+                alt={car.name}
+                className="car-image"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYWFhIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiPkNhcnJvIG7Do28gZGlzcG9uw612ZWw8L3RleHQ+PC9zdmc+';
+                }}
+              />
             </div>
             <div className="car-info">
               <h3>{car.name}</h3>
@@ -165,4 +170,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;

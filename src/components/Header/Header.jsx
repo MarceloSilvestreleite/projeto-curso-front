@@ -1,7 +1,7 @@
 import './Header.css';
 import logo from '../../assets/logo/logo.png';
-import phoneIcon from '../../assets/icons/phone-icon.png';
-import emailIcon from '../../assets/icons/email-icon.png';
+import { NavLink } from 'react-router-dom';
+
 
 const Header = () => {
   return (
@@ -22,10 +22,32 @@ const Header = () => {
         </div>
         
         <nav className="main-menu">
-          <a href="/">Carros</a>
-          <a href="/">Informações</a>
-          <a href="/">Contato</a>
-        </nav>
+  <NavLink 
+    to="/" 
+    end 
+    className={({ isActive }) => isActive ? 'active-link' : ''}
+  >
+    Home
+  </NavLink>
+  <NavLink 
+    to="/carros" 
+    className={({ isActive }) => isActive ? 'active-link' : ''}
+  >
+    Carros
+  </NavLink>
+  <NavLink 
+    to="/informacoes"
+    className={({ isActive }) => isActive ? 'active-link' : ''}
+  >
+    Informações
+  </NavLink>
+  <NavLink 
+    to="/contato"
+    className={({ isActive }) => isActive ? 'active-link' : ''}
+  >
+    Contato
+  </NavLink>
+</nav>
       </div>
 
       {/* Linha Inferior - Slogan */}

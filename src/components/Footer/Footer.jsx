@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-info">
-          <p>Frota de luxo disponível: Ferrari, Lamborghini, BMW, Porsche | Locação em principais capitais brasileiras</p>
+          <p>Frota de luxo disponível: Ferrari, Lamborghini, BMW, Porsche | Locação em principais cidades</p>
         </div>
       </div>
     </footer>
