@@ -1,6 +1,18 @@
 import './Main.css';
 import FerrariImg from '../../assets/carros/ferrari.jpg';
 import Lamborghini from '../../assets/carros/lamborghini.jpg';
+import porche from '../../assets/carros/porsche.jpg';
+import mclaren from '../../assets/carros/mclaren.jpg';
+import aston from '../../assets/carros/astonMartin.jpg';
+import bugatti from '../../assets/carros/bugatti.jpg';
+import mercedes from '../../assets/carros/image10.svg';
+import audi from '../../assets/carros/audi.jpg';
+import bentley from '../../assets/carros/bentley.jpg';
+import koenigsegg from '../../assets/carros/koenigsegg.jpg';
+import lexus from '../../assets/carros/lexus.jpg';
+import ford from '../../assets/carros/image11.svg';
+import pagani from '../../assets/carros/image20.svg';
+import rollsRoyce from '../../assets/carros/rollsRoyce.jpg';
 
 const Main = () => {
   const luxuryCars = [
@@ -24,7 +36,7 @@ const Main = () => {
       id: 3,
       name: 'Porsche 911 Turbo S',
       price: 'R$ 1.800.000',
-      image: 'https://example.com/porsche.jpg',
+      image: porche, // Usando a imagem importada
       features: ['Boxer 6 3.8L', '650 HP', '0-100km/h em 2.7s', 'PDK 8 velocidades'],
       description: 'O 911 Turbo S é a combinação perfeita entre luxo, tecnologia e desempenho esportivo.'
     },
@@ -32,7 +44,7 @@ const Main = () => {
       id: 4,
       name: 'McLaren 720S',
       price: 'R$ 3.500.000',
-      image: 'https://example.com/mclaren.jpg',
+      image: mclaren,
       features: ['V8 4.0L', '720 HP', '0-100km/h em 2.8s', 'Fibra de carbono'],
       description: 'Com design aerodinâmico e tecnologia de ponta, o 720S redefine o conceito de supercarro.'
     }, // Faltava esta vírgula aqui
@@ -40,7 +52,7 @@ const Main = () => {
       id: 5,
       name: 'Aston Martin DBS Superleggera',
       price: 'R$ 2.950.000',
-      image: 'https://example.com/aston-dbs.jpg',
+      image: aston,
       features: ['V12 5.2L', '715 HP', '0-100km/h em 3.4s', 'Velocidade máxima 340km/h'],
       description: 'Elegância britânica com desempenho brutal. O DBS Superleggera é a definição de um grand tourer com alma de supercarro.'
     },
@@ -48,7 +60,7 @@ const Main = () => {
       id: 6,
       name: 'Bugatti Chiron Sport',
       price: 'R$ 18.000.000',
-      image: 'https://example.com/bugatti-chiron.jpg',
+      image: bugatti,
       features: ['W16 8.0L quad-turbo', '1500 HP', '0-100km/h em 2.4s', 'Velocidade máxima limitada a 420km/h'],
       description: 'O ápice da engenharia automotiva. O Chiron Sport é uma obra de arte em movimento que redefine os limites de velocidade.'
     },
@@ -56,7 +68,7 @@ const Main = () => {
       id: 7,
       name: 'Mercedes-AMG GT R Pro',
       price: 'R$ 1.950.000',
-      image: 'https://example.com/amg-gtr.jpg',
+      image: mercedes,
       features: ['V8 4.0L biturbo', '585 HP', '0-100km/h em 3.6s', 'Aerodinâmica ativa'],
       description: 'O mais radical dos AMG, com tecnologia derivada diretamente das pistas de corrida para as ruas.'
     },
@@ -64,7 +76,7 @@ const Main = () => {
       id: 8,
       name: 'Audi R8 V10 Performance',
       price: 'R$ 2.300.000',
-      image: 'https://example.com/audi-r8.jpg',
+      image: audi,
       features: ['V10 5.2L', '620 HP', '0-100km/h em 3.1s', 'Quattro tração integral'],
       description: 'Precisão alemã com o rugido inconfundível de um V10 aspirado. O esportivo definitivo para os puristas.'
     },
@@ -72,7 +84,7 @@ const Main = () => {
       id: 9,
       name: 'Bentley Continental GT Speed',
       price: 'R$ 2.750.000',
-      image: 'https://example.com/bentley-conti.jpg',
+      image: bentley,
       features: ['W12 6.0L', '650 HP', '0-100km/h em 3.6s', 'Interior em madeira nobre e couro'],
       description: 'O grand tourer mais luxuoso do mundo, com desempenho que rivaliza os superesportivos.'
     },
@@ -80,7 +92,7 @@ const Main = () => {
       id: 10,
       name: 'Koenigsegg Jesko Absolut',
       price: 'R$ 25.000.000',
-      image: 'https://example.com/koenigsegg.jpg',
+      image: koenigsegg,
       features: ['V8 5.0L biturbo', '1600 HP (com E85)', '0-100km/h em 2.5s', 'Velocidade máxima teórica 480km/h'],
       description: 'A máquina mais extrema já criada pela Koenigsegg, projetada para quebrar todos os recordes de velocidade.'
     },
@@ -88,7 +100,7 @@ const Main = () => {
       id: 11,
       name: 'Lexus LFA',
       price: 'R$ 6.500.000',
-      image: 'https://example.com/lexus-lfa.jpg',
+      image: lexus,
       features: ['V10 4.8L', '560 HP', '0-100km/h em 3.7s', 'Motor desenvolvido com a Yamaha'],
       description: 'Raridade japonesa com um dos melhores sons de motor já criados. Apenas 500 unidades produzidas no mundo.'
     },
@@ -96,7 +108,7 @@ const Main = () => {
       id: 12,
       name: 'Ford GT Heritage Edition',
       price: 'R$ 4.800.000',
-      image: 'https://example.com/ford-gt.jpg',
+      image: ford,
       features: ['V6 3.5L EcoBoost', '660 HP', '0-100km/h em 2.8s', 'Chassis em fibra de carbono'],
       description: 'A lenda americana reinventada. Herança das vitórias em Le Mans com tecnologia do século XXI.'
     },
@@ -104,7 +116,7 @@ const Main = () => {
       id: 13,
       name: 'Pagani Huayra BC',
       price: 'R$ 15.000.000',
-      image: 'https://example.com/pagani-huayra.jpg',
+      image: pagani,
       features: ['V12 6.0L AMG', '800 HP', '0-100km/h em 2.8s', 'Carroceria em carbotitanium'],
       description: 'A obra-prima de Horacio Pagani, onde arte e engenharia se encontram no mais alto nível.'
     },
@@ -112,7 +124,7 @@ const Main = () => {
       id: 14,
       name: 'Rolls-Royce Wraith Black Badge',
       price: 'R$ 4.200.000',
-      image: 'https://example.com/rr-wraith.jpg',
+      image: rollsRoyce,
       features: ['V12 6.6L', '632 HP', '0-100km/h em 4.3s', 'Teto estrelado personalizável'],
       description: 'O lado sombrio do luxo. Wraith Black Badge combina prestígio Rolls-Royce com atitude rebelde.'
     }
