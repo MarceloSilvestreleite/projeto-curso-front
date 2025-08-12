@@ -1,0 +1,72 @@
+/* Status badges */
+.status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.status-badge.disponível {
+  background-color: #4CAF50;
+}
+
+.status-badge.indisponível {
+  background-color: #f44336;
+}
+
+.status-badge.alugado {
+  background-color: #FFC107;
+  color: #333;
+}
+
+/* Ajustes específicos para SVG */
+.car-image-container {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 8px 8px 0 0;
+}
+
+.car-image {
+  max-width: 90%;
+  max-height: 90%;
+  transition: transform 0.3s ease;
+}
+
+.car-card:hover .car-image {
+  transform: scale(1.05);
+}
+
+/* Melhorias no layout para SVG */
+.car-info {
+  padding: 1.2rem;
+  background: white;
+  border-radius: 0 0 8px 8px;
+}
+
+.car-info h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.price-tag {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .car-image-container {
+    height: 180px;
+  }
+  
+  .car-info {
+    padding: 1rem;
+  }
+}
