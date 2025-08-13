@@ -9,17 +9,26 @@ import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="app-container">
         <Header /> {/* Fixo em todas as páginas */}
         
-        <Routes>
-          {/* Rotas com conteúdo dinâmico */}
-          <Route path="/" element={<Home />} />
-          <Route path="/carros" element={<Cars />} />
-          <Route path="/informacoes" element={<Info />} />
-          <Route path="/contato" element={<Contact />} />
-        </Routes>
+        <main className="main-content">
+          <Routes>
+            {/* Rotas com conteúdo dinâmico */}
+            <Route path="/" element={<Home />} />
+            <Route path="/carros" element={<Cars />} />
+            <Route path="/informacoes" element={<Info />} />
+            <Route path="/contato" element={<Contact />} />
+            
+            {/* Rota para tratamento de erro 404 */}
+            <Route path="*" element={
+              <div className="error-page">
+                <h1>404 - Página não encontrada</h1>
+              </div>
+            } />
+          </Routes>
+        </main>
 
         <Footer /> {/* Fixo em todas as páginas */}
       </div>
