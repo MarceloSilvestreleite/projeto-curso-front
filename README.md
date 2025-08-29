@@ -1,12 +1,21 @@
-# React + Vite
+ARTEFATO DE TESTE - GESTÃO DE CONFIGURAÇÃO
+Repositório: projeto-curso-front
+Data: 15/12/2024
+Disciplina: Projeto de Software
+Atividade: A4 - Paradigmas em Projeto de Software Estratégico
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este arquivo foi criado como artefato de teste para demonstrar o uso de ferramentas de gestão de configuração (Git/GitHub) no contexto de Governança de TI, alinhado às práticas de ITIL, COBIT e ESG.
 
-Currently, two official plugins are available:
+OBJETIVOS:
+- Versionamento de artefatos
+- Controle de mudanças
+- Rastreabilidade de documentos
+- Colaboração em equipe
+- Conformidade com governança corporativa
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+BENEFÍCIOS ESPERADOS:
+- Melhoria na gestão de configuração
+- Transparência nos processos
+- Auditabilidade das alterações
+- Alinhamento com melhores práticas de TI
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
