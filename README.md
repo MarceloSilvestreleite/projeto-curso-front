@@ -1,6 +1,6 @@
 ARTEFATO DE TESTE - GESTÃO DE CONFIGURAÇÃO
 Repositório: projeto-curso-front
-Data: 15/12/2024
+
 Disciplina: Projeto de Software
 Atividade: A4 - Paradigmas em Projeto de Software Estratégico
 
